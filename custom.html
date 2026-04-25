@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{background:#fff0f6;font-family:'Poppins',sans-serif;text-align:center;padding:40px;}
+h2{color:#ff69b4;}
+canvas{border:2px solid #ffb6d9;border-radius:10px;margin-top:20px;background-color: white;}
+input{border-radius: 30px; box-sizing:border-box;}
+button{margin-top:15px;padding:10px 15px;border:none;border-radius:10px;background:#ff69b4;color:white;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<h2>Draw Your Custom Crochet 🎨</h2>
+<input type="color" id="colorPicker" value="#00000"><br>
+<canvas id="canvas" width="240" height="240"></canvas><br>
+<button onclick="clearCanvas()">Clear</button>
+<button onclick="downloadImage()">Submit</button>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const grid = 16;
+const size = canvas.width / grid;
+let drawing = false;
+
+canvas.addEventListener('mousedown', ()=> drawing=true);
+canvas.addEventListener('mouseup', ()=> drawing=false);
+canvas.addEventListener('mousemove', e=>{
+ if(!drawing) return;
+ const rect = canvas.getBoundingClientRect();
+ const x = Math.floor((e.clientX-rect.left)/size);
+ const y = Math.floor((e.clientY-rect.top)/size);
+ ctx.fillStyle = document.getElementById('colorPicker').value;
+ ctx.fillRect(x*size,y*size,size,size);
+});
+
+function clearCanvas(){ctx.clearRect(0,0,canvas.width,canvas.height);}
+function downloadImage(){
+ const link=document.createElement('a');
+ link.download='design.png';
+ link.href=canvas.toDataURL();
+ link.click();
+ alert('Send this design to us 💖');
+}
+</script>
+
+</body>
+</html>

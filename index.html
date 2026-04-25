@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CozyLoops</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+body {
+  background: #FFFF;
+  background: linear-gradient(23deg, rgba(255, 255, 255, 1) 30%, rgba(209, 159, 159, 1) 100%);
+}
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background: #CBE490;
+background: linear-gradient(276deg, rgba(203, 228, 144, 1) 0%, rgba(255, 105, 180, 1) 100%);
+  border-bottom: solid;
+  border-color: #473D3D;
+  border-width: 1.5px;
+}
+.logo {
+  font-size:1.5rem;
+  font-weight:600;
+  color:white;
+}
+nav a {
+  margin-left:20px;
+  text-decoration:none;
+  color:white;
+}
+.hero {
+  text-align:center;
+  padding:60px 20px;
+}
+.products {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:40px;
+}
+.card_pair {
+  background:white;
+  border-radius:20px;
+  padding:15px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+.card_impair {
+  background:white;
+  border-radius:20px;
+  padding:15px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+.card_pair img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:15px;
+}
+.card_impair img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:15px;
+}
+.card_pair h3 {
+  margin:10px 0;
+  color:#ff69b4;
+}
+.card_impair h3 {
+  margin:10px 0;
+  color:#ff69b4;
+}
+.card_pair button {
+  background:#ff69b4;
+  border:none;
+  color:white;
+  padding:10px;
+  border-radius:10px;
+  width:100%;
+  cursor:pointer;
+}
+.card_impair button {
+  background: #8DB04D;
+  border:none;
+  color:white;
+  padding:10px;
+  border-radius:10px;
+  width:100%;
+  cursor:pointer;
+}
+footer {
+  text-align:center;
+  padding:20px;
+  background: rgba(200, 228, 144, 10.01);
+  background: linear-gradient(23deg, rgba(200, 228, 144, 1) 0%, rgba(255, 105, 108, 1) 100%);
+  color:white;
+}
+.hero h1 {
+  color:#ff69b4;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ImaArtStudio</div>
+  <nav>
+    <a href="#products">Shop</a>
+    <a href="#contact">Contact</a>
+    <a href="custom.html">Custom</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img classe="logo_img" src="logo-resized.png" alt="Logo">
+  <h1>Handmade Crochet Magic ✨</h1>
+  <p>Custom cute creations made with love 💖</p>
+</section>
+
+<section id="products" class="products">
+  <div class="card_pair">
+    <a target="_blank"href="https://www.instagram.com/p/DW_tgThjBQK/"><img src="img7.jpg" alt="crochet1"></a>
+    <h3>Cute Chick Keychain</h3>
+    <button>Order</button>
+  </div>
+
+  <div class="card_impair">
+    <img src="img2.jpg" alt="crochet1">
+    <h3>Little Penguin</h3>
+    <button>Order</button>
+  </div>
+
+  <div class="card_pair">
+    <a target ="_blank"href="https://www.instagram.com/p/DXENc4RjPA-/"><img src="img5.jpg" alt="crochet1"></a>
+    <h3>Flower Bouquet</h3>
+    <button>Order</button>
+  </div>
+  <div class="card_impair">
+    <img src="img6.jpg" alt="crochet1">
+    <h3>Ladybug Keychain</h3>
+    <button>Order</button>
+  </div>
+  
+    <div class="card_pair">
+    <img src="bunny.jpg" alt="crochet1">
+    <h3>Bunnys pair</h3>
+    <button>Order</button>
+  </div>
+  
+  <div class="card_impair">
+    <img src="img10.jpg" alt="crochet1">
+    <h3>White Pearl Handbag</h3>
+    <button>Order</button>
+  </div>
+
+  <div class="card_pair">
+    <img src="img11.jpg" alt="crochet1">
+    <h3>Kawaii Keychain</h3>
+    <button>Order</button>
+  </div>
+
+
+  <div class="card_impair">
+    <img src="img1.jpg" alt="crochet1">
+    <h3>Paw Charm</h3>
+    <button>Order</button>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 CozyLoops By ImArtStodio</p>
+</footer>
+
+</body>
+</html>
+
+
